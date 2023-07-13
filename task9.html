@@ -1,0 +1,37 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/nullstyle.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>task9</title>
+  </head>
+  <body>
+    <main class="page">
+      <div class="page__container">
+        <div class="task">
+          <div class="task__condition text">10)Знайти першу ціну, що більше за 1000</div>
+        </div>
+        <script>
+          // генеруєм масив з цінами
+          function getPricesOnSecurities(startPeriod, endPeriod) {
+            let arr = []
+            let minCoast = 1
+            let maxCoast = 10000
+            for (startPeriod; startPeriod < endPeriod; startPeriod++) {
+              let price = minCoast + Math.floor(Math.random() * maxCoast)
+              arr.push(price)
+            }
+            return arr
+          }
+          let startPeriod = parseInt(prompt("введіть початок періоду"))
+          let endPeriod = parseInt(prompt("введіть кінець періоду"))
+          let allPricesOnSecurities = getPricesOnSecurities(startPeriod, endPeriod)
+          let firstPriceMoreThen1000 = allPricesOnSecurities.find((price) => price > 1000)
+          document.write(`перша ціна більша 1000 це ${firstPriceMoreThen1000}`)
+        </script>
+      </div>
+    </main>
+  </body>
+</html>

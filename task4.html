@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/nullstyle.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>task4</title>
+  </head>
+  <body>
+    <main class="page">
+      <div class="page__container">
+        <div class="task">
+          <div class="task__condition text">5)Підрахувати кількість змін цін</div>
+        </div>
+        <script>
+          // знов написав масив вручну щоб наглядніше було
+          let allPricesOnSecurities = [-3500, 200, 342, 900, 900, 700, 23, 23, 9, 7000, 7000, 7000, -10]
+          let countOfCahange = allPricesOnSecurities.reduce((changeCount, el, indx, arr) => (el !== arr[indx + 1] ? changeCount + 1 : changeCount), -1)
+          document.write(`ціни мінялись ${countOfCahange} раз`)
+        </script>
+      </div>
+    </main>
+  </body>
+</html>

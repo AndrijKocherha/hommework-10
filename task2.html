@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/nullstyle.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>task2</title>
+  </head>
+  <body>
+    <main class="page">
+      <div class="page__container">
+        <div class="task">
+          <div class="task__condition text">3)Сформувати список з тих цін, які більші за попереднє значення</div>
+        </div>
+        <script>
+          // написав масив вручну щоб наглядніше було
+          let numbers = [-300, 19000, 200, 9000, 100, 1000, -100, 50, 1500]
+          newArr = numbers.filter((number, indx, arr) => arr[indx - 1] < number)
+          console.log(numbers)
+          document.write("<ul>")
+          for (const number of newArr) {
+            document.write(`<li style="margin-bottom: 20px;">${number}</li>`)
+          }
+          document.write("</ul>")
+        </script>
+      </div>
+    </main>
+  </body>
+</html>
